@@ -32,7 +32,7 @@ body {
   margin: 0 auto;
   gap: 30px;
 }
-`
+`;
 
 export default class Info extends Component {
   constructor(props) {

@@ -8,6 +8,8 @@ const Wrapper__list = styled.ul`
   gap: 40px;
 `;
 
+localStorage.setItem("activeStickers", JSON.stringify([]));
+
 export class StickerList extends Component {
   constructor(props) {
     super(props);
@@ -15,8 +17,6 @@ export class StickerList extends Component {
     this.state = {
       products: JSON.parse(localStorage.getItem("activeStickers")) || [],
     };
-
-    this.activeProducts = this.activeProducts.bind(this);
   }
 
   activeProducts(productId) {
