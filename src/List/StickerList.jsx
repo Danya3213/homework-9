@@ -17,6 +17,8 @@ export class StickerList extends Component {
     this.state = {
       products: JSON.parse(localStorage.getItem("activeStickers")) || [],
     };
+
+    this.activeProducts = this.activeProducts.bind(this);
   }
 
   activeProducts(productId) {
